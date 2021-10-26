@@ -1,0 +1,58 @@
+@keyframes spinning {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.appButton {
+  display: flex;
+  color: #ffffff;
+  align-items: center;
+  background: #0059cd;
+  cursor: pointer;
+  border: 0px solid transparent;
+  justify-content: space-between;
+  &[disabled]{
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+  & > span{
+    margin-left: 16px;
+    width: 16px;
+    height: 16px;
+    svg{
+      float: left;
+      width: 16px;
+      height: 16px;
+      animation-name: spinning;
+      animation-duration: 2000ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear; 
+      & > path {
+        stroke: #ffffff; 
+      }
+    }
+  }
+}
+.buttonSmall {
+  height: 26px;
+  font-size: 12px;
+  line-height: 26px;
+  padding: 0px 18px;
+}
+.buttonMedium {
+  height: 34px;
+  font-size: 13px;
+  line-height: 34px;
+  padding: 0px 24px;
+}
+.buttonLarge {
+  height: 42px;
+  font-size: 14px;
+  line-height: 42px;
+  padding: 0px 30px;
+}
+.buttonHalfRadius {
+  border-radius: 4px;
+}
+.buttonFullRadius {
+  border-radius: 60px;
+}
